@@ -14,13 +14,24 @@
         alert('The following contact has been selected:' + JSON.stringify(contact));
     }
 
-    function onDeviceReady() {
-      alert ("about to get contact");
+    function de_cameonet() {
       navigator.contacts.pickContact(function(contact){
         got_contact(contact);
       },function(err){
         alert('Error: ' + err);
       });
+    }
+
+    function com_badrit() {
+      window.plugins.ContactPicker.chooseContact(function(contactInfo) {
+        got_contact(contactInfo);
+      });
+    }
+
+    function onDeviceReady() {
+      alert ("about to get contact");
+      // de_cameonet();
+      com_badrit();
     }
 
     </script>
