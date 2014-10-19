@@ -17,10 +17,10 @@
   </author>
 
   <!--
-  <gap:plugin name="org.apache.cordova.contacts" />
   <gap:plugin name="de.cameonet.cordova.contacts" />
-  -->
   <gap:plugin name="com.badrit.contactpicker" />
+  -->
+  <gap:plugin name="org.apache.cordova.contacts" />
 
   <access origin="*" />
 
