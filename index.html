@@ -13,6 +13,7 @@
     // device APIs are available
     //
     function onDeviceReady() {
+      alert ("about to get contact");
       navigator.contacts.pickContact(function(contact){
         alert('The following contact has been selected:' + JSON.stringify(contact));
       },function(err){
