@@ -16,7 +16,10 @@
     Scott Kaplan
   </author>
 
+  <!--
   <gap:plugin name="org.apache.cordova.contacts" />
+  -->
+  <gap:plugin name="de.cameonet.cordova.contacts" />
 
   <access origin="*" />
 
