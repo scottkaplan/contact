@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contacts Example</title>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+      navigator.contacts.pickContact(function(contact){
+        alert('The following contact has been selected:' + JSON.stringify(contact));
+      },function(err){
+        alert('Error: ' + err);
+      });
+    }
+
+    </script>
+  </head>
+  <body>
+    Hello World
+  </body>
+</html>
+
