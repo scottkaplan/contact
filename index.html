@@ -10,12 +10,14 @@
     //
     document.addEventListener("deviceready", onDeviceReady, false);
 
-    // device APIs are available
-    //
+    function got_contact(contact) {
+        alert('The following contact has been selected:' + JSON.stringify(contact));
+    }
+
     function onDeviceReady() {
       alert ("about to get contact");
       navigator.contacts.pickContact(function(contact){
-        alert('The following contact has been selected:' + JSON.stringify(contact));
+        got_contact(contact);
       },function(err){
         alert('Error: ' + err);
       });
