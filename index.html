@@ -28,9 +28,18 @@
       });
     }
 
+    function test() {
+    navigator.contacts.pickContact(function(contact){
+        console.log('The following contact has been selected:' + JSON.stringify(contact));
+    },function(err){
+        console.log('Error: ' + err);
+    });
+    }
+
     function onDeviceReady() {
       alert ("about to get contact");
-      de_cameonet();
+      test();
+      // de_cameonet();
       // com_badrit();
     }
 
