@@ -4,49 +4,16 @@
     <title>Contacts Example</title>
 
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript">
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    function got_contact(contact) {
-        alert('The following contact has been selected:' + JSON.stringify(contact));
-    }
-
-    function de_cameonet() {
-      navigator.contacts.pickContact(function(contact){
-        got_contact(contact);
-      },function(err){
-        alert('Error: ' + err);
-      });
-    }
-
-    function com_badrit() {
-      window.plugins.ContactPicker.chooseContact(function(contactInfo) {
-        got_contact(contactInfo);
-      });
-    }
-
-    function test() {
-    navigator.contacts.pickContact(function(contact){
-        console.log('The following contact has been selected:' + JSON.stringify(contact));
-    },function(err){
-        console.log('Error: ' + err);
-    });
-    }
-
-    function onDeviceReady() {
-      alert ("about to get contact");
-      test();
-      // de_cameonet();
-      // com_badrit();
-    }
-
-    </script>
+    <script src="https://eng.geopeers.com/contact.js"></script>
   </head>
   <body>
     Hello World
+    <button onclick="pick_contact">
+      pick contact
+    </button>
+    <button onclick="find_contact">
+      find contact
+    </button>
   </body>
 </html>
 
